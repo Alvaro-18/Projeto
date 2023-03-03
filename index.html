@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@700&display=swap" rel="stylesheet">
+
+    <title>Requerimentos IFBA</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <nav>
+      <img src="assets/Logo_ifba_login.svg" alt="Logo-do-Instituo-Federal-da-Bahia" id="logo"/>
+      <a href="#"><button id="requerimento"> Requerimento <img src="./assets/plus.svg" alt="Mais"/></button></a>
+
+      <a href="../mobile/login.html"> <img src="./assets/plus_m.svg" alt="Sinal_de_mais"/></a>
+    </nav>
+
+    <main>
+      <div class="mural">
+        <h2>Mural de deferimentos</h2>
+        <p>Username - 15/02/2023 - 16H30 - deferido</p>
+        <div class="bar"></div>
+        <p>Username - 15/02/2023 - 16H30 - deferido</p>
+        <div class="bar"></div>
+        <p>Username - 15/02/2023 - 16H30 - deferido</p>
+        <div class="bar"></div>
+        <p>Username - 15/02/2023 - 16H30 - deferido</p>
+        <div class="bar"></div>
+        <p>Username - 15/02/2023 - 16H30 - deferido</p>
+        <div class="bar"></div>
+        <p>Username - 15/02/2023 - 16H30 - deferido</p>
+        <div class="bar"></div>
+        <p>Username - 15/02/2023 - 16H30 - deferido</p>
+      </div>
+
+
+      <div class="carrosel">
+        <div class="card">
+          <img src="https://fastly.picsum.photos/id/237/325/351.jpg?hmac=Rk_pNXLkQ-TsJTpjwFGen2On54T5Uh9WJgJ_x8c7Bmw" alt="Society-image">
+          <div class="con-text">
+            <h2>Society</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img src="https://fastly.picsum.photos/id/237/325/351.jpg?hmac=Rk_pNXLkQ-TsJTpjwFGen2On54T5Uh9WJgJ_x8c7Bmw" alt="Quadra-image">
+          <div class="con-text">
+            <h2>Quadra</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          </div>
+        </div>
+
+      </div>
+
+
+      <div class="popUpLogin">
+        <div class="logo">
+          <img src="./assets/Logo_ifba_login.svg" alt="Logo_do_Instituto_Federal_da_Bahia">
+        </div>
+        <form>
+          <input type="text" typemode="numeric" placeholder="N° de matrícula">
+          <input type="password" placeholder="Senha">
+        </form>
+    
+        <div class="link"><a href="#">Esqueceu a senha</a></div>
+    
+        <button id="login">Login</button>
+        <h2>Você não tem uma conta ? 
+          <button id="cadastro">Cadastre-se agora</button></h2>
+      </div>
+
+      <div class="popUpSingUp">
+        <div class="logo">
+          <img src="./assets/Logo_ifba_login.svg" alt="Logo_do_Instituto_Federal_da_Bahia">
+        </div>
+        <form>
+          <input type="text" placeholder="Nome Completo" required id="nome">
+          <input type="text" typemode="numeric" placeholder="N° de matrícula" required id="matricula">
+          <input type="password" placeholder="Senha" required id="senha">
+          <input type="password" placeholder="Confirme a senha" required id="confirmeSenha">
+        </form>
+        <button id="complete">Cadastre-se</button>
+
+
+        <div class="concluido">
+          <h1>CADASTRO REALIZADO COM SUCESSO, CONFIRA O EMAIL INSTITUCIONAL</h1>
+          <img src="../mobile/assets/concluido.svg" alt="Confirmação_de_conclusão_do_cadastro">
+        </div>
+      </div>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

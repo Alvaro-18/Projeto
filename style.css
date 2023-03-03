@@ -1,0 +1,414 @@
+@charset "UTF-8";
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'DM sans', sans-serif;
+}
+
+:root {
+  /*White mode set*/
+  --principal-color-white: #1B8C2C;
+  --bg-color-white: #fffaf1;
+  --mural-color-white:#ffffff;
+
+  /*Dark mode set*/
+  --principal-color-dark: #00420C;
+  --bg-color-dark: #2B2B29;
+  --mural-color-dark: #1E1E1E;
+
+}
+
+body{
+  background-color: var(--bg-color-white);
+}
+
+/*============nav===================*/
+nav{
+  background-color: var(--principal-color-white);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav #logo{
+  padding-top: 0.4rem;
+}
+
+nav a:first-of-type { /*botão do modo pc*/
+  display: none;
+}
+
+nav a:last-child{
+  margin-right: 2rem;
+}
+
+/*============MAIN===================*/
+
+main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mural{
+  display: flex;
+  flex-direction: column;
+
+  width: 325px;
+  height: fit-content;
+
+  text-align: center;
+  align-items: center;
+
+  margin-top: 2rem;
+  padding-top: 0.3rem;
+
+  background-color: var(--mural-color-white);
+  border: 2px solid var(--principal-color-dark);
+
+  border-radius: 0.5rem;
+}
+
+.mural div.bar{
+  width: 250px;
+  border: 0.2px solid black;
+}
+
+.mural p{
+  width: 274px;
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.carrosel{
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  width: 325px;
+
+  border-radius: 2rem;
+  height: fit-content;
+
+  display: flex;
+  flex-direction: row;
+
+
+  overflow: auto;
+}
+
+.carrosel .card{
+  position: relative;
+  display: inline-block;
+}
+
+.carrosel .card .con-text{
+  position: absolute;
+  top: 240px;
+  width: 300px;
+  color: #fff;
+  padding-left: 1rem;
+}
+
+main .popUpLogin, .popUpSingUp{
+  display: none;
+}
+
+
+@media (min-width:1024px){
+  nav a:first-of-type{
+    display: initial;
+    margin-right: 20px;
+    text-decoration: none;
+  }
+
+  nav a:last-child{
+    display: none;
+  }
+
+  nav button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 11px;
+
+
+    background-color: var(--principal-color-dark);
+    border: none;
+    border-radius: 10px;
+    width: 250px;
+    height: 46px;
+
+    color: #ffffff;
+    font-size: 26px;
+
+  }
+
+  nav button:hover{
+    cursor: pointer;
+  }
+
+  nav{
+    margin-bottom: 40px;
+    margin: 1px solid red;
+  }
+
+
+  main{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  main .mural {
+    width: 604px;
+    padding: 1rem 0rem 1rem;
+    margin-right: 2rem;
+  }
+
+  main .mural p {
+    width: 600px;
+  }
+
+  main .carrosel{
+    width: 500px;
+    margin-left: 2rem;
+  }
+
+  main .carrosel .card {
+    width: fit-content;
+    height: fit-content;
+  }
+
+  .carrosel::-webkit-scrollbar-track {
+    background-color: #fff;
+    border: 3px solid #D9D9D9;
+    
+}
+  .carrosel::-webkit-scrollbar {
+    border-radius: 8px;
+}
+  .carrosel::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background: #D9D9D9;
+}
+
+/*===================popUpLogin=======================*/
+  main .popUpLogin{
+    display: none;
+    flex-direction: column;
+
+    background-color: var(--principal-color-white);
+
+    text-align: center;
+    align-items: center;
+    position: absolute;
+    margin-top: 6rem;
+    padding-top: 2rem;
+
+    width: 571px;
+    height: 530px;
+
+    border-radius: 2rem;
+}
+
+  main .popUpLogin form{
+    margin-top: 2rem;
+    margin-bottom: 0.4rem;
+  
+    display: flex;
+    flex-direction: column;
+  
+  
+    width: 477px;
+  
+  
+    gap: 1rem;
+  }
+
+  .popUpLogin form input{
+    color: var(--font-color);
+    font-size: 30px;
+    font-weight: bold;
+    padding: 0.3rem 0.8rem;
+  
+    border-radius: 14px;
+    border: 2px solid var(--principal-color-dark);
+    background-color: var(--principal-color-white);
+  
+    outline: none;
+  }
+
+  .popUpLogin form input::placeholder{
+    color: var(--font-color);
+  }
+
+  .popUpLogin .link{
+    align-self: center;
+    width: 454px;
+    text-align: right;
+  }
+  
+  .popUpLogin .link a{
+    text-decoration: none;
+    color: #CCCCCC;
+  }
+  
+  #login{
+    background-color: var(--principal-color-dark);
+  
+    border: none;
+    width: 477px;
+    margin-top: 5rem;
+  
+    align-self: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--principal-color-white);
+  
+  
+    padding: 0.5rem;
+    border-radius: 24px;
+  }
+
+  #cadastro{
+    background: none;
+    border: none;
+    color: #CCCCCC;
+    font-size: 20px;
+  }
+  
+  .popUpLogin button:hover{
+    cursor: pointer;
+  }
+  
+  .popUpLogin h2{
+    width: 477px;
+    align-self: center;
+  
+    font-size: 20px;
+
+    margin-top: 1rem;
+  }
+  
+  .popUpLogin h2 a{
+    text-decoration: none;
+    color: #CCCCCC;
+  }
+
+  /*===================popUpSing==============*/
+
+  main .popUpSingUp{
+    display: none;
+    flex-direction: column;
+
+    background-color: var(--principal-color-white);
+
+    text-align: center;
+    align-items: center;
+    position: absolute;
+    margin-top: 6rem;
+    padding-top: 2rem;
+
+    width: 571px;
+    height: 530px;
+
+    border-radius: 2rem;
+}
+
+  main .popUpSingUp form{
+    margin-top: 2rem;
+    margin-bottom: 0.4rem;
+  
+    display: flex;
+    flex-direction: column;
+  
+  
+    width: 477px;
+  
+  
+    gap: 1rem;
+  }
+
+  .popUpSingUp form input{
+    color: var(--font-color);
+    font-size: 30px;
+    font-weight: bold;
+    padding: 0.3rem 0.8rem;
+  
+    border-radius: 14px;
+    border: 2px solid var(--principal-color-dark);
+    background-color: var(--principal-color-white);
+  
+    outline: none;
+  }
+
+  .popUpSingUp form input::placeholder{
+    color: var(--font-color);
+  }
+
+  .popUpSingUp button{
+    background-color: var(--principal-color-dark);
+  
+    border: none;
+    width: 477px;
+    margin-top: 2rem;
+  
+    align-self: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--principal-color-white);
+  
+  
+    padding: 0.5rem;
+    border-radius: 24px;
+  }
+  
+  .popUpSingUp button:hover{
+    cursor: pointer;
+  }
+  
+  .popUpSingUp h2{
+    width: 477px;
+    align-self: center;
+  
+    font-size: 20px;
+
+    margin-top: 1rem;
+  }
+  
+  .popUpSingUp h2 a{
+    text-decoration: none;
+    color: #CCCCCC;
+  }
+  
+  .popUpSingUp .concluido{
+    display: none;
+    position: absolute;
+    background-color: var(--principal-color-dark);
+    top: 150px;
+    background-color: var(--principal-color-white);
+    height: 350px;
+    padding-bottom: 50px;
+    border-radius: 20px;
+  }
+
+  .popUpSingUp .concluido h1{
+    padding-bottom: 3rem;
+  }
+
+
+
+
+
+
+}
+
+
+@media (min-width:1025px){
+  main{
+    gap: 10rem;
+  }
+}
