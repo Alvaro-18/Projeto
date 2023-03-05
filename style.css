@@ -214,6 +214,15 @@ main .popUpLogin, .popUpSingUp{
     border-radius: 2rem;
 }
 
+/*Set dos botões para fechar o popUp*/
+  main .popUpLogin .logo .fecharLog, .popUpSingUp .logo .fecharSing{
+    background: none;
+    border: none;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+  }
+
   main .popUpLogin form{
     margin-top: 2rem;
     margin-bottom: 0.4rem;
@@ -349,7 +358,7 @@ main .popUpLogin, .popUpSingUp{
     color: var(--font-color);
   }
 
-  .popUpSingUp button{
+  #complete{
     background-color: var(--principal-color-dark);
   
     border: none;
