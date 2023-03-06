@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-*{
+* {
   margin: 0;
   padding: 0;
   font-family: 'DM sans', sans-serif;
@@ -8,50 +8,61 @@
 
 :root {
   /*White mode set*/
-  --principal-color-white: #1B8C2C;
+  --principal-color-white: #1b8c2c;
   --bg-color-white: #fffaf1;
-  --mural-color-white:#ffffff;
+  --mural-color-white: #ffffff;
+  --font-color: #fff;
 
   /*Dark mode set*/
-  --principal-color-dark: #00420C;
-  --bg-color-dark: #2B2B29;
-  --mural-color-dark: #1E1E1E;
-
+  --principal-color-dark: #00420c;
+  --bg-color-dark: #2b2b29;
+  --mural-color-dark: #1e1e1e;
 }
 
-body{
+body {
   background-color: var(--bg-color-white);
 }
 
-/*============nav===================*/
-nav{
+/*===========mobile========================*/
+
+/*============navMobile===================*/
+nav {
   background-color: var(--principal-color-white);
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-nav #logo{
-  padding-top: 0.4rem;
+nav #logo {
+  padding-top: 0.5rem;
 }
 
-nav a:first-of-type { /*botão do modo pc*/
+.user {
+  background-color: initial;
+  border: none;
+  width: fit-content;
+  margin-right: 32px;
+}
+
+#btnRequerimento {
+  /*botão do modo pc*/
   display: none;
 }
 
-nav a:last-child{
+nav a:last-child {
   margin-right: 2rem;
 }
 
+
 /*============MAIN===================*/
 
-main{
+main {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.mural{
+.mural {
   display: flex;
   flex-direction: column;
 
@@ -70,12 +81,12 @@ main{
   border-radius: 0.5rem;
 }
 
-.mural div.bar{
+.mural div.bar {
   width: 250px;
   border: 0.2px solid black;
 }
 
-.mural p{
+.mural p {
   width: 274px;
   font-size: 24px;
   font-weight: bold;
@@ -83,7 +94,7 @@ main{
   margin-bottom: 0.5rem;
 }
 
-.carrosel{
+.carrosel {
   margin-top: 3rem;
   margin-bottom: 3rem;
   width: 325px;
@@ -94,16 +105,15 @@ main{
   display: flex;
   flex-direction: row;
 
-
   overflow: auto;
 }
 
-.carrosel .card{
+.carrosel .card {
   position: relative;
   display: inline-block;
 }
 
-.carrosel .card .con-text{
+.carrosel .card .con-text {
   position: absolute;
   top: 240px;
   width: 300px;
@@ -111,29 +121,100 @@ main{
   padding-left: 1rem;
 }
 
-main .popUpLogin, .popUpSingUp{
+main .popUpLogin,
+.popUpSingUp {
   display: none;
 }
 
+/*===================formMobile====================*/
 
-@media (min-width:1024px){
-  nav a:first-of-type{
-    display: initial;
-    margin-right: 20px;
-    text-decoration: none;
+.formRequerimento{
+  background-color: var(--mural-color-white);
+
+  width: 100%;
+  height: 777px;
+
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.formRequerimento input{
+  width: 328px;
+  height: 55px;
+
+  font-size: 30px;
+
+  padding-left: 1rem;
+
+  border-radius: 1rem;
+  border: 3px solid var(--principal-color-dark);
+}
+
+.formRequerimento input::placeholder{
+  color: #000;
+}
+
+.formRequerimento .check {
+  display: flex;
+  flex-direction: row;
+
+
+  width: 353px;
+
+
+}
+
+  .formRequerimento .check input {
+    width: 80px;
   }
 
-  nav a:last-child{
+  .formRequerimento .check h2{
+    margin-top: 10px;
+  }
+
+.formRequerimento .btn button {
+  width: 353px;
+  height: 55px;
+
+
+  background-color: var(--principal-color-dark);
+  color: var(--font-color);
+
+  border-radius: 2rem;
+  border: none;
+
+  margin-top: 2rem;
+
+  font-size: 30px;
+  font-weight: bold;
+}
+
+
+/*==================================Computador=============================================*/
+
+@media (min-width: 1024px) {
+
+  /*============navPC===================*/
+  #btnRequerimento {
+    display: initial;
+  }
+
+  nav a:last-child {
     display: none;
   }
 
-  nav button{
+  nav button {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 11px;
 
-
+    margin-right: 20px;
     background-color: var(--principal-color-dark);
     border: none;
     border-radius: 10px;
@@ -142,20 +223,20 @@ main .popUpLogin, .popUpSingUp{
 
     color: #ffffff;
     font-size: 26px;
-
   }
 
-  nav button:hover{
+  nav button:hover {
     cursor: pointer;
   }
 
-  nav{
+  nav {
     margin-bottom: 40px;
     margin: 1px solid red;
   }
 
+  /*============mainPC===================*/
 
-  main{
+  main {
     display: flex;
     flex-direction: row-reverse;
     justify-content: center;
@@ -172,7 +253,7 @@ main .popUpLogin, .popUpSingUp{
     width: 600px;
   }
 
-  main .carrosel{
+  main .carrosel {
     width: 500px;
     margin-left: 2rem;
   }
@@ -184,19 +265,18 @@ main .popUpLogin, .popUpSingUp{
 
   .carrosel::-webkit-scrollbar-track {
     background-color: #fff;
-    border: 3px solid #D9D9D9;
-    
-}
+    border: 3px solid #d9d9d9;
+  }
   .carrosel::-webkit-scrollbar {
     border-radius: 8px;
-}
+  }
   .carrosel::-webkit-scrollbar-thumb {
     border-radius: 8px;
-    background: #D9D9D9;
-}
+    background: #d9d9d9;
+  }
 
-/*===================popUpLogin=======================*/
-  main .popUpLogin{
+  /*===================popUpLogin=======================*/
+  main .popUpLogin {
     display: none;
     flex-direction: column;
 
@@ -212,10 +292,11 @@ main .popUpLogin, .popUpSingUp{
     height: 530px;
 
     border-radius: 2rem;
-}
+  }
 
-/*Set dos botões para fechar o popUp*/
-  main .popUpLogin .logo .fecharLog, .popUpSingUp .logo .fecharSing{
+  /*Set dos botões para fechar o popUp*/
+  main .popUpLogin .logo .fecharLog,
+  .popUpSingUp .logo .fecharSing {
     background: none;
     border: none;
     position: absolute;
@@ -223,93 +304,93 @@ main .popUpLogin, .popUpSingUp{
     top: 15px;
   }
 
-  main .popUpLogin form{
+  main .popUpLogin form {
     margin-top: 2rem;
     margin-bottom: 0.4rem;
-  
+
     display: flex;
     flex-direction: column;
-  
-  
+
     width: 477px;
-  
-  
+
     gap: 1rem;
   }
 
-  .popUpLogin form input{
+  .popUpLogin form input {
     color: var(--font-color);
     font-size: 30px;
     font-weight: bold;
     padding: 0.3rem 0.8rem;
-  
+
     border-radius: 14px;
     border: 2px solid var(--principal-color-dark);
     background-color: var(--principal-color-white);
-  
+
     outline: none;
   }
 
-  .popUpLogin form input::placeholder{
+  .popUpLogin form input::placeholder {
     color: var(--font-color);
   }
 
-  .popUpLogin .link{
+  /*esqueceu a senha link*/
+  .popUpLogin .link { 
     align-self: center;
     width: 454px;
     text-align: right;
   }
-  
-  .popUpLogin .link a{
+
+  .popUpLogin .link a {
     text-decoration: none;
-    color: #CCCCCC;
+    color: #cccccc;
   }
-  
-  #login{
+  /*esqueceu a senha link*/
+
+
+  #login {
     background-color: var(--principal-color-dark);
-  
+
     border: none;
     width: 477px;
     margin-top: 5rem;
-  
+
     align-self: center;
     font-size: 30px;
     font-weight: bold;
     color: var(--principal-color-white);
-  
-  
+
     padding: 0.5rem;
     border-radius: 24px;
   }
 
-  #cadastro{
+  #cadastro {
     background: none;
     border: none;
-    color: #CCCCCC;
+    color: #cccccc;
     font-size: 20px;
   }
-  
-  .popUpLogin button:hover{
+
+  .popUpLogin button:hover {
     cursor: pointer;
   }
-  
-  .popUpLogin h2{
+
+  .popUpLogin h2 {
     width: 477px;
     align-self: center;
-  
+
     font-size: 20px;
 
     margin-top: 1rem;
   }
-  
-  .popUpLogin h2 a{
+
+  .popUpLogin h2 a {
     text-decoration: none;
-    color: #CCCCCC;
+    color: #cccccc;
   }
 
   /*===================popUpSing==============*/
 
-  main .popUpSingUp{
+  main .popUpSingUp {
     display: none;
     flex-direction: column;
 
@@ -325,75 +406,72 @@ main .popUpLogin, .popUpSingUp{
     height: 530px;
 
     border-radius: 2rem;
-}
+  }
 
-  main .popUpSingUp form{
+  main .popUpSingUp form {
     margin-top: 2rem;
     margin-bottom: 0.4rem;
-  
+
     display: flex;
     flex-direction: column;
-  
-  
+
     width: 477px;
-  
-  
+
     gap: 1rem;
   }
 
-  .popUpSingUp form input{
+  .popUpSingUp form input {
     color: var(--font-color);
     font-size: 30px;
     font-weight: bold;
     padding: 0.3rem 0.8rem;
-  
+
     border-radius: 14px;
     border: 2px solid var(--principal-color-dark);
     background-color: var(--principal-color-white);
-  
+
     outline: none;
   }
 
-  .popUpSingUp form input::placeholder{
+  .popUpSingUp form input::placeholder {
     color: var(--font-color);
   }
 
-  #complete{
+  #sendCadastro {
     background-color: var(--principal-color-dark);
-  
+
     border: none;
     width: 477px;
     margin-top: 2rem;
-  
+
     align-self: center;
     font-size: 30px;
     font-weight: bold;
     color: var(--principal-color-white);
-  
-  
+
     padding: 0.5rem;
     border-radius: 24px;
   }
-  
-  .popUpSingUp button:hover{
+
+  .popUpSingUp button:hover {
     cursor: pointer;
   }
-  
-  .popUpSingUp h2{
+
+  .popUpSingUp h2 {
     width: 477px;
     align-self: center;
-  
+
     font-size: 20px;
 
     margin-top: 1rem;
   }
-  
-  .popUpSingUp h2 a{
+
+  .popUpSingUp h2 a {
     text-decoration: none;
-    color: #CCCCCC;
+    color: #cccccc;
   }
-  
-  .popUpSingUp .concluido{
+
+  .popUpSingUp .concluido {
     display: none;
     position: absolute;
     background-color: var(--principal-color-dark);
@@ -404,20 +482,80 @@ main .popUpLogin, .popUpSingUp{
     border-radius: 20px;
   }
 
-  .popUpSingUp .concluido h1{
+  .popUpSingUp .concluido h1 {
     padding-bottom: 3rem;
   }
 
+  /*===================form====================*/
 
+  .user {
+    background-color: initial;
+    width: fit-content;
+    margin-right: 32px;
+  }
 
+  .formRequerimento {
+    width: 94%;
+    height: fit-content;
+    display: initial;
 
+    background-color: #ffff;
+    border: 3px solid var(--principal-color-dark);
+    border-radius: 0.8rem;
 
+    padding-top: 3rem;
+    padding-left: 2rem;
+    padding-bottom: 2rem;
+  }
 
+  .formRequerimento input {
+    width: 300px;
+    height: 30px;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0.4rem;
+    padding-left: 0.4rem;
+    margin-left: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .formRequerimento .btn {
+    display: flex;
+
+    width: 93%;
+    margin-left: 2rem;
+    justify-content: right;
+  }
+
+  .formRequerimento div {
+    display: flex;
+
+    width: 320px;
+    height: fit-content;
+  }
+
+  .formRequerimento div input {
+    width: 50px;
+    margin-left: 2rem;
+    margin-right: 0.5rem;
+  }
+
+  .formRequerimento button {
+    width: 353px;
+    height: 55px;
+
+    background-color: var(--principal-color-dark);
+    border-radius: 2rem;
+    border: none;
+    color: var(--font-color);
+
+    font-size: 30px;
+    font-weight: bold;
+  }
 }
 
-
-@media (min-width:1025px){
-  main{
+@media (min-width: 1025px) {
+  main {
     gap: 10rem;
   }
 }
