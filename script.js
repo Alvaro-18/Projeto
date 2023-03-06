@@ -1,6 +1,6 @@
 
 //botão de requerimento
-const requerimento = document.getElementById('requerimento');
+const requerimento = document.getElementById('btnRequerimento');
 requerimento.addEventListener('click', popUp);
 
 //função de abrir o popUp de login
@@ -19,7 +19,7 @@ function popUp2(){
 }
 
 //botão de cadastro
-const complete = document.getElementById('complete');
+const complete = document.getElementById('sendCadastro');
 complete.addEventListener('click', completar);
 //função de abrir o popUp de cadastro completo
 function completar(){
