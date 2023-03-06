@@ -144,7 +144,7 @@ main .popUpLogin,
 }
 
 .formRequerimento input{
-  width: 328px;
+  width: 320px;
   height: 55px;
 
   font-size: 30px;
@@ -164,9 +164,7 @@ main .popUpLogin,
   flex-direction: row;
 
 
-  width: 353px;
-
-
+  width: 350px;
 }
 
   .formRequerimento .check input {
@@ -178,14 +176,14 @@ main .popUpLogin,
   }
 
 .formRequerimento .btn button {
-  width: 353px;
+  width: 350px;
   height: 55px;
 
 
   background-color: var(--principal-color-dark);
   color: var(--font-color);
 
-  border-radius: 2rem;
+  border-radius: 1.5rem;
   border: none;
 
   margin-top: 2rem;
