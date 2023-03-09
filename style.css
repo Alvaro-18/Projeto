@@ -550,6 +550,100 @@ main .popUpLogin,
     font-size: 30px;
     font-weight: bold;
   }
+
+  /*========================Página do professor=======================*/
+
+  .requerimentos {
+    width: 94%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+  
+    background-color: #ffff;
+    border: 3px solid var(--principal-color-dark);
+    border-radius: 0.8rem;
+  
+    padding-bottom: 2rem;
+  }
+  
+  .requerimentos .nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+  
+    height: 50px;
+  
+    background-color: var(--principal-color-dark);
+    color: var(--font-color);
+  
+    padding-left: 2rem;
+    margin-bottom: 33px;
+  
+    border-radius: 0.4rem 0.4rem 0rem 0rem;
+  
+    font-size: 20px;
+    
+  }
+  
+  .requerimentos input{
+    width: 30px;
+    height: 30px;
+  }
+  
+  .requerimentos .requerimento{
+    width: fit-content;
+  
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+  
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+  
+    border-bottom: 3px solid var(--principal-color-dark);
+  }
+  
+  .requerimentos .requerimento input:before{
+    content: "";
+    position: absolute;
+    background-color: var(--bg-color-white);
+    border: 3px solid var(--principal-color-dark);
+    border-radius: 0rem 0rem 0.4rem 0rem;
+    width: 30px;
+    height: 28px;
+  }
+  
+  .requerimentos .requerimento input:checked::before{
+    content: "   ✔️";
+    position: absolute;
+    left: 72px;
+  }
+  
+  .requerimentos .btn{
+    display: flex;
+  
+    width: 93%;
+    margin-left: 2rem;
+    justify-content: right;
+  }
+  
+  .requerimentos button {
+    width: 353px;
+    height: 55px;
+  
+    background-color: var(--principal-color-dark);
+    border-radius: 2rem;
+    border: none;
+    color: var(--font-color);
+  
+    font-size: 30px;
+    font-weight: bold;
+  }
+  
+  input:hover, button:hover{
+    cursor: pointer;
+  }
 }
 
 @media (min-width: 1025px) {
