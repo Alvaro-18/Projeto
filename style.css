@@ -13,10 +13,17 @@
   --mural-color-white: #ffffff;
   --font-color: #fff;
 
-  /*Dark mode set*/
+
+}
+
+@media(prefers-color-scheme: dark){
+  :root{
+      /*Dark mode set*/
   --principal-color-dark: #00420c;
   --bg-color-dark: #2b2b29;
   --mural-color-dark: #1e1e1e;
+  --font-color: #fff;
+  }
 }
 
 body {
