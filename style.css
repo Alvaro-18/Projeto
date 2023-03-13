@@ -8,33 +8,53 @@
 
 :root {
   /*White mode set*/
-  --principal-color-white: #1b8c2c;
-  --bg-color-white: #fffaf1;
-  --mural-color-white: #ffffff;
-  --font-color: #fff;
+  --principal-color: #1b8c2c;
+  --secundary-color:#00420c;
 
+  --bg-color: #fffaf1;
+  --mural-color: #ffffff;
 
+  --primary-font-color:#000000;
+  --secundary-font-color: #fff;
+  
+  --bar-color:#000;
+
+  --scrolbar: #D9D9D9;
+  --scrolbar-bg: #fff;
+
+  --link-color:#CCCCCC;
 }
 
 @media(prefers-color-scheme: dark){
   :root{
       /*Dark mode set*/
-  --principal-color-dark: #00420c;
-  --bg-color-dark: #2b2b29;
-  --mural-color-dark: #1e1e1e;
-  --font-color: #fff;
+  --principal-color:#00420c;
+  --secundary-color: #1b8c2c;
+
+  --bg-color: #2b2b29;
+  --mural-color: #1e1e1e;
+
+  --primary-font-color: #fff;
+  --secundary-font-color: #000;
+
+  --bar-color:#fff;
+
+  --scrolbar: #1E1E1E;
+  --scrolbar-bg: #555555;
+
+  --link-color:#B9B9B9;
   }
 }
 
 body {
-  background-color: var(--bg-color-white);
+  background-color: var(--bg-color);
 }
 
 /*===========mobile========================*/
 
 /*============navMobile===================*/
 nav {
-  background-color: var(--principal-color-white);
+  background-color: var(--principal-color);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -82,15 +102,20 @@ main {
   margin-top: 2rem;
   padding-top: 0.3rem;
 
-  background-color: var(--mural-color-white);
-  border: 2px solid var(--principal-color-dark);
+  background-color: var(--mural-color);
+  border: 2px solid var(--principal-color);
 
   border-radius: 0.5rem;
+  
+}
+
+.mural h2{
+  color: var(--primary-font-color);
 }
 
 .mural div.bar {
   width: 250px;
-  border: 0.2px solid black;
+  border: 0.2px solid var(--bar-color);
 }
 
 .mural p {
@@ -99,6 +124,8 @@ main {
   font-weight: bold;
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
+
+  color: var(--primary-font-color);
 }
 
 .carrosel {
@@ -124,7 +151,7 @@ main {
   position: absolute;
   top: 240px;
   width: 300px;
-  color: #fff;
+  color: var(--primary-font-color);
   padding-left: 1rem;
 }
 
@@ -136,7 +163,7 @@ main .popUpLogin,
 /*===================formMobile====================*/
 
 .formRequerimento{
-  background-color: var(--mural-color-white);
+  background-color: var(--mural-color);
 
   width: 100%;
   height: 777px;
@@ -159,7 +186,7 @@ main .popUpLogin,
   padding-left: 1rem;
 
   border-radius: 1rem;
-  border: 3px solid var(--principal-color-dark);
+  border: 3px solid var(--principal-color);
 }
 
 .formRequerimento input::placeholder{
@@ -187,7 +214,7 @@ main .popUpLogin,
   height: 55px;
 
 
-  background-color: var(--principal-color-dark);
+  background-color: var(--secundary-color);
   color: var(--font-color);
 
   border-radius: 1.5rem;
@@ -206,8 +233,8 @@ main .popUpLogin,
   display: flex;
   flex-direction: column;
 
-  background-color: #ffff;
-  border: 3px solid var(--principal-color-dark);
+  background-color: var(--mural-color);
+  border: 3px solid var(--principal-color);
   border-radius: 0.8rem;
 
   padding-bottom: 2rem;
@@ -222,8 +249,8 @@ main .popUpLogin,
 
   height: 50px;
 
-  background-color: var(--principal-color-dark);
-  color: var(--font-color);
+  background-color: var(--principal-color);
+  color: var(--primary-font-color);
 
   padding-left: 1.5rem;
   margin-bottom: 33px;
@@ -249,24 +276,27 @@ main .popUpLogin,
   margin-left: 1.5rem;
   margin-bottom: 1rem;
 
-  border-bottom: 3px solid var(--principal-color-dark);
+  border-bottom: 3px solid var(--principal-color);
   font-size: 16px;
+
+  color: var(--primary-font-color);
 }
 
 .requerimentos .requerimento input:before{
   content: "";
   position: absolute;
-  background-color: var(--bg-color-white);
-  border: 3px solid var(--principal-color-dark);
+  background-color: var(--bg-color);
+  border: 3px solid var(--principal-color);
   border-radius: 0rem 0rem 0.4rem 0rem;
-  width: 30px;
+  width: 25px;
   height: 28px;
 }
 
 .requerimentos .requerimento input:checked::before{
-  content: "   ✔️";
+  content: "✔️";
   position: absolute;
-  left: 49px;
+  padding-left: 0.5rem;
+  left: 9%;
 }
 
 .requerimentos .btn{
@@ -282,13 +312,19 @@ main .popUpLogin,
   width: 353px;
   height: 55px;
 
-  background-color: var(--principal-color-dark);
+  background-color: var(--principal-color);
   border-radius: 2rem;
   border: none;
-  color: var(--font-color);
+  color: var(--primary-font-color);
 
   font-size: 30px;
   font-weight: bold;
+}
+
+@media(min-width:620px) and (max-width:1024px){
+  .requerimentos .requerimento input:checked::before{
+    left: 8%;
+  }
 }
 
 
@@ -312,13 +348,13 @@ main .popUpLogin,
     gap: 11px;
 
     margin-right: 20px;
-    background-color: var(--principal-color-dark);
+    background-color: var(--secundary-color);
     border: none;
     border-radius: 10px;
     width: 250px;
     height: 46px;
 
-    color: #ffffff;
+    color: var(--secundary-font-color);
     font-size: 26px;
   }
 
@@ -328,7 +364,6 @@ main .popUpLogin,
 
   nav {
     margin-bottom: 40px;
-    margin: 1px solid red;
   }
 
   /*============mainPC===================*/
@@ -361,15 +396,15 @@ main .popUpLogin,
   }
 
   .carrosel::-webkit-scrollbar-track {
-    background-color: #fff;
-    border: 3px solid #d9d9d9;
+    background-color: var(--scrolbar-bg);
+    border: 3px solid var(--scrolbar);
   }
   .carrosel::-webkit-scrollbar {
     border-radius: 8px;
   }
   .carrosel::-webkit-scrollbar-thumb {
     border-radius: 8px;
-    background: #d9d9d9;
+    background: var(--scrolbar);
   }
 
   /*===================popUpLogin=======================*/
@@ -377,7 +412,7 @@ main .popUpLogin,
     display: none;
     flex-direction: column;
 
-    background-color: var(--principal-color-white);
+    background-color: var(--principal-color);
 
     text-align: center;
     align-items: center;
@@ -399,6 +434,7 @@ main .popUpLogin,
     position: absolute;
     right: 20px;
     top: 15px;
+    border: 1px solid red;
   }
 
   main .popUpLogin form {
@@ -414,20 +450,20 @@ main .popUpLogin,
   }
 
   .popUpLogin form input {
-    color: var(--font-color);
+    color: var(--primary-font-color);
     font-size: 30px;
     font-weight: bold;
     padding: 0.3rem 0.8rem;
 
     border-radius: 14px;
-    border: 2px solid var(--principal-color-dark);
-    background-color: var(--principal-color-white);
+    border: 2px solid var(--secundary-color);
+    background-color: var(--principal-color);
 
     outline: none;
   }
 
   .popUpLogin form input::placeholder {
-    color: var(--font-color);
+    color: var(--primary-font-color);
   }
 
   /*esqueceu a senha link*/
@@ -439,13 +475,13 @@ main .popUpLogin,
 
   .popUpLogin .link a {
     text-decoration: none;
-    color: #cccccc;
+    color: var(--link-color);
   }
   /*esqueceu a senha link*/
 
 
   #login {
-    background-color: var(--principal-color-dark);
+    background-color: var(--secundary-color);
 
     border: none;
     width: 477px;
@@ -454,7 +490,7 @@ main .popUpLogin,
     align-self: center;
     font-size: 30px;
     font-weight: bold;
-    color: var(--principal-color-white);
+    color: var(--principal-color);
 
     padding: 0.5rem;
     border-radius: 24px;
@@ -463,7 +499,7 @@ main .popUpLogin,
   #cadastro {
     background: none;
     border: none;
-    color: #cccccc;
+    color: var(--link-color);
     font-size: 20px;
   }
 
@@ -480,9 +516,8 @@ main .popUpLogin,
     margin-top: 1rem;
   }
 
-  .popUpLogin h2 a {
-    text-decoration: none;
-    color: #cccccc;
+  .popUpLogin h2 {
+    color: var(--primary-font-color);
   }
 
   /*===================popUpSing==============*/
@@ -491,7 +526,7 @@ main .popUpLogin,
     display: none;
     flex-direction: column;
 
-    background-color: var(--principal-color-white);
+    background-color: var(--principal-color);
 
     text-align: center;
     align-items: center;
@@ -518,24 +553,24 @@ main .popUpLogin,
   }
 
   .popUpSingUp form input {
-    color: var(--font-color);
+    color: var(--primary-font-color);
     font-size: 30px;
     font-weight: bold;
     padding: 0.3rem 0.8rem;
 
     border-radius: 14px;
-    border: 2px solid var(--principal-color-dark);
-    background-color: var(--principal-color-white);
+    border: 2px solid var(--secundary-color);
+    background-color: var(--principal-color);
 
     outline: none;
   }
 
   .popUpSingUp form input::placeholder {
-    color: var(--font-color);
+    color: var(--primary-font-color);
   }
 
   #sendCadastro {
-    background-color: var(--principal-color-dark);
+    background-color: var(--secundary-color);
 
     border: none;
     width: 477px;
@@ -544,7 +579,7 @@ main .popUpLogin,
     align-self: center;
     font-size: 30px;
     font-weight: bold;
-    color: var(--principal-color-white);
+    color: var(--principal-color);
 
     padding: 0.5rem;
     border-radius: 24px;
@@ -554,26 +589,11 @@ main .popUpLogin,
     cursor: pointer;
   }
 
-  .popUpSingUp h2 {
-    width: 477px;
-    align-self: center;
-
-    font-size: 20px;
-
-    margin-top: 1rem;
-  }
-
-  .popUpSingUp h2 a {
-    text-decoration: none;
-    color: #cccccc;
-  }
-
   .popUpSingUp .concluido {
     display: none;
     position: absolute;
-    background-color: var(--principal-color-dark);
+    background-color: var(--principal-color);
     top: 150px;
-    background-color: var(--principal-color-white);
     height: 350px;
     padding-bottom: 50px;
     border-radius: 20px;
@@ -581,6 +601,7 @@ main .popUpLogin,
 
   .popUpSingUp .concluido h1 {
     padding-bottom: 3rem;
+    color: var(--primary-font-color);
   }
 
   /*===================form====================*/
@@ -596,8 +617,8 @@ main .popUpLogin,
     height: fit-content;
     display: initial;
 
-    background-color: #ffff;
-    border: 3px solid var(--principal-color-dark);
+    background-color: var(--mural-color);
+    border: 4px solid var(--secundary-color);
     border-radius: 0.8rem;
 
     padding-top: 3rem;
@@ -614,6 +635,25 @@ main .popUpLogin,
     padding-left: 0.4rem;
     margin-left: 2rem;
     margin-bottom: 3rem;
+
+    background-color: var(--mural-color);
+    border: 1px solid var(--secundary-color);
+    color: var(--primary-font-color);
+  }
+
+  .formRequerimento input::placeholder{
+    color: var(--primary-font-color);
+  }
+
+
+  .formRequerimento .check input {
+    width: 50px;
+    margin-left: 2rem;
+    margin-right: 0.5rem;
+  }
+
+  .formRequerimento .check h2{
+    color: var(--primary-font-color);
   }
 
   .formRequerimento .btn {
@@ -622,29 +662,17 @@ main .popUpLogin,
     width: 93%;
     margin-left: 2rem;
     justify-content: right;
+
+    color: var(--primary-font-color);
   }
 
-  .formRequerimento div {
-    display: flex;
-
-    width: 320px;
-    height: fit-content;
-  }
-
-  .formRequerimento div input {
-    width: 50px;
-    margin-left: 2rem;
-    margin-right: 0.5rem;
-  }
-
-  .formRequerimento button {
+  .formRequerimento .btn button {
     width: 353px;
     height: 55px;
 
-    background-color: var(--principal-color-dark);
+    background-color: var(--secundary-color);
     border-radius: 2rem;
     border: none;
-    color: var(--font-color);
 
     font-size: 30px;
     font-weight: bold;
@@ -658,8 +686,8 @@ main .popUpLogin,
     display: flex;
     flex-direction: column;
   
-    background-color: #ffff;
-    border: 3px solid var(--principal-color-dark);
+    background-color: var(--mural-color);
+    border: 4px solid var(--secundary-color);
     border-radius: 0.8rem;
   
     padding-bottom: 2rem;
@@ -673,8 +701,8 @@ main .popUpLogin,
   
     height: 50px;
   
-    background-color: var(--principal-color-dark);
-    color: var(--font-color);
+    background-color: var(--secundary-color);
+    color: var(--primary-font-color);
   
     padding-left: 2rem;
     margin-bottom: 33px;
@@ -700,14 +728,15 @@ main .popUpLogin,
     margin-left: 2rem;
     margin-bottom: 1rem;
   
-    border-bottom: 3px solid var(--principal-color-dark);
+    border-bottom: 3px solid var(--secundary-color);
+    color: var(--primary-font-color);
   }
   
   .requerimentos .requerimento input:before{
     content: "";
     position: absolute;
-    background-color: var(--bg-color-white);
-    border: 3px solid var(--principal-color-dark);
+    background-color: var(--bg-color);
+    border: 3px solid var(--secundary-color);
     border-radius: 0rem 0rem 0.4rem 0rem;
     width: 30px;
     height: 28px;
@@ -716,7 +745,8 @@ main .popUpLogin,
   .requerimentos .requerimento input:checked::before{
     content: "   ✔️";
     position: absolute;
-    left: 72px;
+    padding-left: 0px;
+    left: 78px;
   }
   
   .requerimentos .btn{
@@ -731,10 +761,10 @@ main .popUpLogin,
     width: 353px;
     height: 55px;
   
-    background-color: var(--principal-color-dark);
+    background-color: var(--secundary-color);
     border-radius: 2rem;
     border: none;
-    color: var(--font-color);
+    color: var(--primary-font-color);
   
     font-size: 30px;
     font-weight: bold;
