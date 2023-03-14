@@ -23,6 +23,7 @@
   --scrolbar-bg: #fff;
 
   --link-color:#CCCCCC;
+  --user-circle: #D9D9D9;
 }
 
 @media(prefers-color-scheme: dark){
@@ -43,6 +44,7 @@
   --scrolbar-bg: #555555;
 
   --link-color:#B9B9B9;
+  --user-circle: #ababab;
   }
 }
 
@@ -62,6 +64,14 @@ nav {
 
 nav #logo {
   padding-top: 0.5rem;
+}
+
+nav rect{
+  fill: var(--secundary-color);
+}
+
+nav path{
+  fill: var(--secundary-font-color);
 }
 
 .user {
@@ -186,11 +196,13 @@ main .popUpLogin,
   padding-left: 1rem;
 
   border-radius: 1rem;
-  border: 3px solid var(--principal-color);
+  border: 3px solid var(--secundary-color);
+  background-color: var(--mural-color);
+  color: var(--primary-font-color);
 }
 
 .formRequerimento input::placeholder{
-  color: #000;
+  color: var(--primary-font-color);
 }
 
 .formRequerimento .check {
@@ -199,6 +211,7 @@ main .popUpLogin,
 
 
   width: 350px;
+  color: var(--primary-font-color);
 }
 
   .formRequerimento .check input {
@@ -206,7 +219,7 @@ main .popUpLogin,
   }
 
   .formRequerimento .check h2{
-    margin-top: 0.1rem;
+    margin-top: 0.5rem;
   }
 
 .formRequerimento .btn button {
@@ -215,7 +228,7 @@ main .popUpLogin,
 
 
   background-color: var(--secundary-color);
-  color: var(--font-color);
+  color: var(--primary-font-color);
 
   border-radius: 1.5rem;
   border: none;
@@ -362,6 +375,11 @@ main .popUpLogin,
     cursor: pointer;
   }
 
+  /*set color do plus no button*/
+  nav path, line{
+    stroke: var(--secundary-font-color);
+  }
+
   nav {
     margin-bottom: 40px;
   }
@@ -434,7 +452,10 @@ main .popUpLogin,
     position: absolute;
     right: 20px;
     top: 15px;
-    border: 1px solid red;
+  }
+
+  .popUpLogin path, .popUpSingUp path{
+    fill: var(--secundary-color);
   }
 
   main .popUpLogin form {
@@ -604,6 +625,13 @@ main .popUpLogin,
     color: var(--primary-font-color);
   }
 
+  .popUpSingUp .concluido circle{
+    fill: var(--primary-font-color);
+  }
+  .popUpSingUp .concluido path{
+    fill: var(--principal-color);
+  }
+
   /*===================form====================*/
 
   .user {
@@ -611,6 +639,15 @@ main .popUpLogin,
     width: fit-content;
     margin-right: 32px;
   }
+
+  .user circle{
+    fill: var(--user-circle);
+  }
+
+ #userHead{
+    fill: #000000;
+  }
+
 
   .formRequerimento {
     width: 94%;
@@ -645,15 +682,16 @@ main .popUpLogin,
     color: var(--primary-font-color);
   }
 
-
   .formRequerimento .check input {
     width: 50px;
     margin-left: 2rem;
     margin-right: 0.5rem;
+    margin-top: 0.6rem;
   }
 
   .formRequerimento .check h2{
     color: var(--primary-font-color);
+
   }
 
   .formRequerimento .btn {
