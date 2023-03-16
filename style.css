@@ -1,5 +1,5 @@
 @charset "UTF-8";
-
+/*reset dos presets padrões da página*/
 * {
   margin: 0;
   padding: 0;
@@ -66,6 +66,7 @@ nav #logo {
   padding-top: 0.5rem;
 }
 
+/*configuração do svg do botão*/
 nav rect{
   fill: var(--secundary-color);
 }
@@ -74,6 +75,7 @@ nav path{
   fill: var(--secundary-font-color);
 }
 
+/*configuração do logo */
 .user {
   background-color: initial;
   border: none;

@@ -12,6 +12,7 @@ function popUp(){
 //botão de cadastrar-se 
 const cad = document.getElementById('cadastro');
 cad.addEventListener('click', popUp2);
+
 //função de abrir o popUp de cadastro
 function popUp2(){
   let SingUp = document.querySelector('.popUpSingUp');
@@ -21,6 +22,7 @@ function popUp2(){
 //botão de cadastro
 const complete = document.getElementById('sendCadastro');
 complete.addEventListener('click', completar);
+
 //função de abrir o popUp de cadastro completo
 function completar(){
   let finish = document.querySelector('.popUpSingUp .concluido');
@@ -48,7 +50,7 @@ function fecharPop2(){
   pop.style.display = 'none';
 }
 
-
+//função de fechar o popUpConcluido
 function fecharComplete(){
   let finish = document.querySelector('.popUpSingUp .concluido');
   finish.style.display = 'none';

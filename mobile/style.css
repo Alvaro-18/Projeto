@@ -82,6 +82,7 @@ form input::placeholder{
   color: var(--primary-font-color);
 }
 
+
 .link{
   align-self: center;
   width: 280px;
