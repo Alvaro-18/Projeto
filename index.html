@@ -78,18 +78,20 @@
         
           <img src="./assets/Logo_ifba_login.svg" alt="Logo_do_Instituto_Federal_da_Bahia">
         </div>
-        <form>
-          <input type="text" typemode="numeric" placeholder="N° de matrícula">
-          <input type="password" placeholder="Senha">
-        </form>
-    
-        <div class="link"><a href="form.html">Esqueceu a senha</a></div> <!--lembrar de tirar o link para o formulario-->
-    
-        <button id="login">Login</button>
-        <h2>Você não tem uma conta ? 
-          <button id="cadastro">Cadastre-se agora</button></h2>
-      </div>
 
+        <form id="loginForm">
+          <p class="erroPreenchimento">Matrícula ou senha incorreta</p>
+          <input type="text" typemode="numeric" placeholder="N° de matrícula" id="loginMatricula">
+          <input type="password" placeholder="Senha" id="loginPassword">
+          
+          <div class="link"><a href="form.html">Esqueceu a senha</a></div> <!--lembrar de tirar o link para o formulario-->
+          
+          <button id="login" type="submit">Login</button>
+        </form>
+          <h2>Você não tem uma conta ? 
+            <button id="cadastro">Cadastre-se agora</button></h2>
+          </div>
+          
       <div class="popUpSingUp">
         <div class="logo">
           <button class="fecharSing">
@@ -100,14 +102,16 @@
 
           <img src="./assets/Logo_ifba_login.svg" alt="Logo_do_Instituto_Federal_da_Bahia">
         </div>
-        <form>
-          <input type="text" placeholder="Nome Completo" required id="nome">
-          <input type="text" typemode="numeric" placeholder="N° de matrícula" required id="matricula">
-          <input type="password" placeholder="Senha" required id="senha">
-          <input type="password" placeholder="Confirme a senha" required id="confirmeSenha">
+
+        <form id="cadastroForm">
+          <p class="erroCadastro">Erro no prenchimento de alguma informação</p>
+          <input type="text" placeholder="Nome Completo" id="nome">
+          <input type="text" typemode="numeric" placeholder="N° de matrícula"  id="matricula">
+          <input type="password" placeholder="Senha" id="senha">
+          <input type="password" placeholder="Confirme a senha" id="confirmeSenha">
+          
+          <button id="sendCadastro" type="submit">Cadastre-se</button>
         </form>
-        
-        <button id="sendCadastro">Cadastre-se</button>
 
 
         <div class="concluido">

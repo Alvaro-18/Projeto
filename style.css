@@ -441,7 +441,7 @@ main .popUpLogin,
     padding-top: 2rem;
 
     width: 571px;
-    height: 530px;
+    height: 550px;
 
     border-radius: 2rem;
   }
@@ -470,6 +470,12 @@ main .popUpLogin,
     width: 477px;
 
     gap: 1rem;
+  }
+
+  main .popUpLogin form p.erroPreenchimento{
+    display: none;
+    color: red;
+    font-weight: bold;
   }
 
   .popUpLogin form input {
@@ -558,7 +564,7 @@ main .popUpLogin,
     padding-top: 2rem;
 
     width: 571px;
-    height: 530px;
+    height: 550px;
 
     border-radius: 2rem;
   }
@@ -573,6 +579,12 @@ main .popUpLogin,
     width: 477px;
 
     gap: 1rem;
+  }
+
+  main .popUpSingUp form p.erroCadastro{
+    display: none;
+    color: red;
+    font-weight: bold;
   }
 
   .popUpSingUp form input {
