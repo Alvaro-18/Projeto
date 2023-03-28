@@ -15,15 +15,18 @@
     <div class="logo">
       <img src="assets/Logo_mobile_w.svg" alt="Logo_do_Instituto_Federal_da_Bahia">
     </div>
-    <form>
-      <input type="text" typemode="numeric" placeholder="N° de matrícula">
-      <input type="password" placeholder="Senha">
+    <form id="login">
+      <p class="erroPreenchimento">Matrícula ou senha incorreta</p>
+      <input type="text" typemode="numeric" placeholder="N° de matrícula" id="loginMatriculaM">
+      <input type="password" placeholder="Senha" id="loginPasswordM">
+      
+      <div class="link"><a href="../form.html">Esqueceu a senha</a></div>
+      
+      <button type="submit" id="loginBtn">Login</button>
+      <h2>Você não tem uma conta ? <a href="singUp.html">Cadastre-se agora</a></h2>
     </form>
-
-    <div class="link"><a href="../form.html">Esqueceu a senha</a></div>
-
-    <button>Login</button>
-    <h2>Você não tem uma conta ? <a href="singUp.html">Cadastre-se agora</a></h2>
   </main>
+
+  <script src="scriptLog.js"></script>
 </body>
 </html>

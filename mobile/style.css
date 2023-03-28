@@ -48,7 +48,10 @@ main{
   flex-direction: column;
 
   align-items: center;
+}
 
+.logo{
+  margin-top: 2rem;
 }
 
 form{
@@ -63,6 +66,20 @@ form{
 
 
   gap: 1rem;
+}
+
+form p.erroPreenchimento{
+  display: none;
+  color: red;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+form p.erroPreenchimentoCad{
+  display: none;
+  color: red;
+  font-weight: bold;
+  font-size: 16px;
 }
 
 form input{
@@ -133,7 +150,7 @@ h2 a{
   position: absolute;
   top: 150px;
   background-color: var(--principal-color);
-  height: 350px;
+  height: 448px;
   padding-bottom: 50px;
   color: var(--primary-font-color);
 }

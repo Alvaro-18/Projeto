@@ -12,13 +12,15 @@
     <div class="logo">
       <img src="assets/Logo_mobile_w.svg" alt="Logo_do_Instituto_Federal_da_Bahia">
     </div>
-    <form>
-      <input type="text" placeholder="Nome Completo" required id="nome">
-      <input type="text" typemode="numeric" placeholder="N° de matrícula" required id="matricula">
-      <input type="password" placeholder="Senha" required id="senha">
-      <input type="password" placeholder="Confirme a senha" required id="confirmeSenha">
+    <form id="cadastro">
+      <p class="erroPreenchimentoCad">Erro no preenchimento do cadastro</p>
+      <input type="text" placeholder="Nome Completo"  id="nome">
+      <input type="text" typemode="numeric" placeholder="N° de matrícula"  id="matricula">
+      <input type="password" placeholder="Senha"  id="senha">
+      <input type="password" placeholder="Confirme a senha"  id="confirmeSenha">
+      <button type="submit" id="cadastroBtn">Cadastre-se</button>
     </form>
-    <button>Cadastre-se</button>
+
     <div class="concluido">
       <h1>CADASTRO REALIZADO COM SUCESSO, CONFIRA O EMAIL INSTITUCIONAL</h1>
       
@@ -28,7 +30,6 @@
         </svg>  
     </div>
   </main>
-
-  <script src="./script.js"></script>
+  <script src="scriptCad.js"></script>
 </body>
 </html>
