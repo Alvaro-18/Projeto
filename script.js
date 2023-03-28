@@ -58,23 +58,47 @@ const form = document.querySelector('#loginForm');
 const matricula = document.querySelector('#loginMatricula');
 const password = document.querySelector('#loginPassword');
 const loginErro = document.querySelector('.popUpLogin form p.erroPreenchimento');
+const loginBtn = document.querySelector('#login')
+let redirecionarControler = true;
 
 form.addEventListener('submit', event => {
   event.preventDefault()
 
   if(!matriculaValidation(matricula.value, 12)) {
     loginErro.style.display = 'block';
+    rd = false;
     return;
+  }
+  else{
+    rd = true;
   }
 
   if(!passwordValidation(password.value, 8)){
     loginErro.style.display = 'block';
     return;
   }
+  if(matricula.value === '202211190010'){
+    loginBtn.addEventListener('click' , redirecionarAdm);
+    rd = false;
+    return;
+  }
+  else{
+    rd = true;
+  }
 
+  if(rd === true){
+    loginBtn.addEventListener('click', redirecionar);
+    return;
+  }
 })
 
+function redirecionar(){
+  window.location.href = 'form.html';
+}
 
+function redirecionarAdm(){
+  window.location.href = 'admPag.html';
+}
 
 
 
