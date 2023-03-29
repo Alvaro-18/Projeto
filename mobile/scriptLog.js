@@ -27,7 +27,7 @@ login.addEventListener('submit', event =>{
     redirecionarControler = true;
   }
 
-  if(matricula.value === '202211190010'){
+  if(matriculaLogin.value === '202211190010'){
     loginBtn.addEventListener('click', redirecionarAdm());
     redirecionarControler = false;
     return;
@@ -44,11 +44,11 @@ login.addEventListener('submit', event =>{
 
 //função de redirecionamento
 function redirecionar(){
-  window.location.href = 'form.html';
+  window.location.href = '../form.html';
 }
 
 function redirecionarAdm(){
-  window.location.href = 'admPag.html'
+  window.location.href = '../admPag.html'
 }
 
 //função de conferir matricula
