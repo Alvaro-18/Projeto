@@ -66,32 +66,40 @@ form.addEventListener('submit', event => {
 
   if(!matriculaValidation(matricula.value, 12)) {
     loginErro.style.display = 'block';
-    rd = false;
+    redirecionarControler = false;
     return;
   }
   else{
-    rd = true;
+    redirecionarControler = true;
   }
 
   if(!passwordValidation(password.value, 8)){
     loginErro.style.display = 'block';
-    return;
-  }
-  if(matricula.value === '202211190010'){
-    loginBtn.addEventListener('click' , redirecionarAdm);
-    rd = false;
+    redirecionarControler = false;
     return;
   }
   else{
-    rd = true;
+    redirecionarControler = true;
   }
 
-  if(rd === true){
+
+  if(matricula.value === '202211190010'){
+    loginBtn.addEventListener('click' , redirecionarAdm);
+    redirecionarControler = false;
+    return;
+  }
+  else{
+    redirecionarControler = true;
+  }
+
+  
+  if(redirecionarControler === true){
     loginBtn.addEventListener('click', redirecionar);
     return;
   }
 })
 
+//função de redirecionamento
 function redirecionar(){
   window.location.href = 'form.html';
 }
