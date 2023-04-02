@@ -3,7 +3,7 @@ Projeto desenvolvido para auxiliar os requerimentos dos alunos, facilitando o ac
 
 ## Link do design feito no Figma
 <div>
-  <a src="https://www.figma.com/file/Pided4JGrzT214LZ02DFV8/Untitled?node-id=0%3A1&t=Tsb1T5eB5NR9cUNu-1"><img align="center" alt="Exemplo" src="./assets/exemplo.png"/></a>
+  <a href="https://www.figma.com/file/Pided4JGrzT214LZ02DFV8/Untitled?node-id=0%3A1&t=Tsb1T5eB5NR9cUNu-1"><img align="center" alt="Exemplo" src="./assets/exemplo.png"/></a>
 </div>
 
 
